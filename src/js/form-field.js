@@ -6,7 +6,6 @@ export class FormField {
     
     FormField.counter += 1;
     this.id = FormField.counter;
-
     this.labelText = labelText;
     this.inputType = inputType;
     this.inputId = inputId;
