@@ -2,15 +2,40 @@ body {
     background: black;
     color: gray;
     text-align: center;
+    min-height: 100vh;
+    height: 100%;
+    padding-bottom: 100px;
 }
+
+
+.title {
+     text-shadow: 4px 2.5px blue;
+       color: coral;
+       margin: 50px;
+}
+
+.containerArrows {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.containerArrows div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    gap: 50px;
 
+}
 
 
 main .container {
@@ -25,14 +50,9 @@ main .container {
     border-radius: 5px;
     /* shadow effect right and left side */
     box-shadow: -7px 0px 2px rgba(128, 128, 128, 0.5) inset, 7px 0px 2px rgba(128, 128, 128, 0.5) inset;
-
+   
 }
 
-.title {
-     text-shadow: 4px 2.5px blue;
-       color: coral;
-
-}
 
 .sectionCards {
     display: flex;
@@ -41,14 +61,14 @@ main .container {
     max-width: 500px;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
-    
+    margin: 0px 20px;
 }
 
 .sectionCards::-webkit-scrollbar {
     display: none;
 }
 
-/* Para Firefox */
+/* For Firefox */
 .sectionCards {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -56,6 +76,7 @@ main .container {
 
 .sectionCards .card {
   border: solid;
+  border-radius: 12px;
   padding: 20px;
   flex: 0 0 auto;
   width: 180px;
@@ -69,11 +90,155 @@ main .container {
 }
 
 
-    /* box-shadow: 0 15px 25px rgb(210, 210, 210, 0.2); */
+/*  */
+
+#myForm {
+  border: groove 7px coral;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  width: 500px;
+  transition: box-shadow 1s;
 
 
+}
+
+#myForm:hover {
+box-shadow: 7px 10px 27px 4px rgba(255,127,80,0.75);
+-webkit-box-shadow: 7px 10px 27px 4px rgba(255,127,80,0.75);
+-moz-box-shadow: 7px 10px 27px 4px rgba(255,127,80,0.75);
+ 
+    transition-duration: 1s;
+}
+
+.form-group {
+    width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+
+}
+
+.form-group label {
+    align-self: start;
+    margin-left: 5px;
+    font-weight: 600;
+
+}
+
+.form-group input {
+    height: 20px;
+    border-radius: 5px;
+    transition: box-shadow 1s;
+
+}
+
+.form-group:hover input {
+    box-shadow: 1px -1px 12px 5px rgba(224,255,80,0.75);
+-webkit-box-shadow: 1px -1px 12px 5px rgba(224,255,80,0.75);
+-moz-box-shadow: 1px -1px 12px 5px rgba(224,255,80,0.75);
+
+    transition-duration: 1s;
+}
+
+ .form-group input:focus {
+    box-shadow: 1px -1px 12px 5px rgba(224,255,80,0.75);
+-webkit-box-shadow: 1px -1px 12px 5px rgba(224,255,80,0.75);
+-moz-box-shadow: 1px -1px 12px 5px rgba(224,255,80,0.75);
+
+}
+
+.form-group input::placeholder {
+    padding-left: 2px;
+    font-weight: 600;
+}
+
+.myBtn {
+ padding: 12px;
+}
+
+.myBtn-1 button {
+    font-family: coursive;
+    font-size: 18px;
+    color: coral;
+    background: blue;
+    border-radius: 12px;
+    padding: 8px;
+    border-style:  groove 2px;
+    border: groove 5px gray;
+    transition: box-shadow 1s;
+
+}
+
+.myBtn button:hover {
+
+box-shadow: 1px -1px 12px 5px rgba(255,127,80,0.75);
+-webkit-box-shadow: 1px -1px 12px 5px rgba(255,127,80,0.75);
+-moz-box-shadow: 1px -1px 12px 5px rgba(255,127,80,0.75);
+
+    transition-duration: 1s;
+}
+
+.myBtn-1 button:active {
+    margin-top: 2px;
+    border: groove 4px gray;
+    font-size: 17px;
+}
 
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
 
 
+}
+
+.modal-content {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    height: 80px;
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-size: 20px;
+    font-family: coursive;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 10px;
+    cursor: pointer;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 
