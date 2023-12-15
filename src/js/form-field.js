@@ -24,6 +24,11 @@ export class FormField {
 
     return formGroup;
   }
-}
+};
+
+  let nameField = new FormField("Name", "text", "name", "name");
+  let surnameField = new FormField("Surname", "surname", "surname", "surname");
+  let emailField = new FormField("Email", "email", "email", "email");
 
 
+  export {nameField, surnameField, emailField};
