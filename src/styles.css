@@ -4,13 +4,33 @@ body {
     text-align: center;
 }
 
+.title {
+     text-shadow: 4px 2.5px blue;
+       color: coral;
+       margin: 50px;
+}
+
+.containerArrows {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.containerArrows div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 
 
 main .container {
@@ -25,14 +45,9 @@ main .container {
     border-radius: 5px;
     /* shadow effect right and left side */
     box-shadow: -7px 0px 2px rgba(128, 128, 128, 0.5) inset, 7px 0px 2px rgba(128, 128, 128, 0.5) inset;
-
+   
 }
 
-.title {
-     text-shadow: 4px 2.5px blue;
-       color: coral;
-
-}
 
 .sectionCards {
     display: flex;
@@ -41,7 +56,7 @@ main .container {
     max-width: 500px;
     scroll-snap-type: x mandatory;
     overflow-x: scroll;
-    
+    margin: 0px 20px;
 }
 
 .sectionCards::-webkit-scrollbar {
@@ -56,6 +71,7 @@ main .container {
 
 .sectionCards .card {
   border: solid;
+  border-radius: 12px;
   padding: 20px;
   flex: 0 0 auto;
   width: 180px;
