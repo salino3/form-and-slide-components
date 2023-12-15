@@ -34,21 +34,6 @@ submitValue.addEventListener("click", function () {
     email: emailValue.value,
   };
 
-//  if (!objForm.name || !objForm.surname || !objForm.email) {
-
-//    const errorMessage = document.getElementById("error-message");
-
-//    const dialogAlert = document.createElement("span");
-
-//    dialogAlert.innerHTML = "Please refill all inputs..";
-//    dialogAlert.setAttribute("class", "msgAlert");
-//    dialogAlert.style.color = "red";
-
-//    errorMessage.appendChild(dialogAlert)
-
-//    return errorMessage.outerHTML;
-//  }
-
 function openModal() {
   const modal = document.getElementById("myModal");
   modal.style.display = "block";
