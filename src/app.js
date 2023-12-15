@@ -1,11 +1,11 @@
-import * as formField from "./js/form-field.js";
-
+import * as FormField from "./js/form-field.js";
+import * as Button from './js/button.js';
 
 
 
   let form = document.getElementById("myForm");
 
-  form.appendChild(formField.nameField.render());
-  form.appendChild(formField.surnameField.render());
-  form.appendChild(formField.emailField.render());
+  form.appendChild(FormField.nameField.render());
+  form.appendChild(FormField.surnameField.render());
+  form.appendChild(FormField.emailField.render());
 
