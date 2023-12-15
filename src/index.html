@@ -11,79 +11,82 @@
     <h1 class="title">Hello from pets Front-End App</h1>
     <main>
       <div>
-      <div class="containerArrows">
-        <h2><b>Slide cards</b></h2>
-        <div>
-          <svg
-          transform="rotate(180)"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M5 12h14"></path>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-          <!--  -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M5 12h14"></path>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
+        <div class="containerArrows">
+          <h2><b>Slide cards</b></h2>
+          <div>
+            <svg
+              transform="rotate(180)"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14"></path>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+            <!--  -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14"></path>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+        </div>
+        <div class="container">
+          <section class="sectionCards">
+            <div class="card">
+              <img src="./images/cat1.jpg" alt="cat" />
+            </div>
+            <div class="card">
+              <img src="./images/dog1.jpg" alt="dog" />
+            </div>
+            <div class="card">
+              <img src="./images/cat2.jpg" alt="cat" />
+            </div>
+            <div class="card">
+              <img src="./images/cat3.jpg" alt="cat" />
+            </div>
+            <div class="card">
+              <img src="./images/dog3.jpg" alt="dog" />
+            </div>
+            <div class="card">
+              <img src="./images/dog2.jpg" alt="dog" />
+            </div>
+            <div class="card">
+              <img src="./images/cat4.jpg" alt="cat" />
+            </div>
+            <div class="card">
+              <img src="./images/dog4.jpg" alt="dog" />
+            </div>
+          </section>
         </div>
       </div>
-      <div class="container">
-        <section class="sectionCards">
-          <div class="card">
-            <img src="./images/cat1.jpg" alt="cat" />
-          </div>
-          <div class="card">
-            <img src="./images/dog1.jpg" alt="dog" />
-          </div>
-          <div class="card">
-            <img src="./images/cat2.jpg" alt="cat" />
-          </div>
-          <div class="card">
-            <img src="./images/cat3.jpg" alt="cat" />
-          </div>
-          <div class="card">
-            <img src="./images/dog3.jpg" alt="dog" />
-          </div>
-          <div class="card">
-            <img src="./images/dog2.jpg" alt="dog" />
-          </div>
-          <div class="card">
-            <img src="./images/cat4.jpg" alt="cat" />
-          </div>
-          <div class="card">
-            <img src="./images/dog4.jpg" alt="dog" />
-          </div>
-        </section>
-      </div>
-    </div>
 
       <div>
-        <form id="myForm" >
-       
-         </form>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <button id="close" class="close" onclick="closeModal()">X</button>
+            <span id="error-message" class="msgAlert"></span>
+          </div>
+        </div>
+        <form id="myForm"></form>
       </div>
     </main>
 
-   
     <script defer type="module" src="./app.js"></script>
   </body>
 </html>
