@@ -29,3 +29,4 @@ export class MyButton {
 
 let submitBtn = new MyButton("Submit", "submit");
 
+export { submitBtn };
