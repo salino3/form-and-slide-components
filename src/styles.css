@@ -91,10 +91,23 @@ main .container {
     width: 500px;
 }
 
+.myBtn {
+ padding: 12px;
+}
 
+.myBtn-1 button {
+ font-family: coursive;
+ font-size: 18px;
+ color: coral;
+ background: blue;
+ border-radius: 12px;
+ padding: 8px;
+  border-style:  groove 2px;
+  border: groove 5px gray;
+}
 
-
-
-
-
-
+.myBtn-1 button:active {
+    margin-top: 2px;
+    border: groove 4px gray;
+    font-size: 17px;
+}

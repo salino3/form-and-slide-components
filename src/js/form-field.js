@@ -2,7 +2,7 @@ export class FormField {
 
   static counter = 0;
 
-  constructor(labelText, inputType, inputId, inputName, style = `${inputName}Box`) {
+  constructor(labelText, inputType, inputId, inputName, pl, style = `${inputName}Box`) {
     
     FormField.counter += 1;
     this.id = FormField.counter;
@@ -10,6 +10,7 @@ export class FormField {
     this.inputType = inputType;
     this.inputId = inputId;
     this.inputName = inputName;
+    this.pl = pl;
     this.style = style;
   };
 
@@ -29,6 +30,7 @@ export class FormField {
     input.setAttribute("id", this.inputId);
     input.setAttribute("name", this.inputName);
     input.setAttribute("class", this.style);
+    input.setAttribute('placeholder', this.pl);
 
     formGroup.appendChild(label);
     formGroup.appendChild(input);
@@ -37,9 +39,9 @@ export class FormField {
   }
 };
 
-  let nameField = new FormField("Name", "text", "name", "name");
-  let surnameField = new FormField("Surname", "surname", "surname");
-  let emailField = new FormField("Email", "email", "email", "email");
+  let nameField = new FormField("Name", "text", "name", "name", "Text your name..");
+  let surnameField = new FormField("Surname", "text", "surname", "surname", "Text your surname..");
+  let emailField = new FormField("Email", "email", "email", "email", "Text your email..");
 
 
   export {nameField, surnameField, emailField};
