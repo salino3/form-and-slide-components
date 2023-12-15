@@ -1,15 +1,20 @@
 {
+  "homepage": "https://salino3.github.io/form-and-slide-components",
   "name": "front",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd src && lite-server -c lite-server.config.json"
+    "start": "cd src && lite-server -c lite-server.config.json",
+    "build": "mkdir build && cp -r src/* build/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -m 'Deploy to GitHub Pages'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^6.1.0",
     "lite-server": "^2.6.1"
   }
 }
