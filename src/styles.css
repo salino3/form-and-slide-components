@@ -85,7 +85,12 @@ main .container {
 }
 
 
-    /* box-shadow: 0 15px 25px rgb(210, 210, 210, 0.2); */
+/*  */
+
+.emailBox {
+    width: 500px;
+}
+
 
 
 
