@@ -44,39 +44,47 @@ submitValue.addEventListener("click", function () {
     email: emailValue.value,
   };
 
+  if (!objForm.name || !objForm.surname || !objForm.email) {
+    const errorMessage = document.getElementById("error-message");
+    errorMessage.innerHTML = "Please refill all inputs..";
+    errorMessage.style.color = "red";
 
-if (!objForm.name || !objForm.surname || !objForm.email) {
-  const errorMessage = document.getElementById("error-message");
-  errorMessage.innerHTML = "Please refill all inputs..";
-  errorMessage.style.color = "red";
+    openModal("myModal");
 
-  openModal("myModal");
+    const btnModal = document.getElementById("close");
 
-  const btnModal = document.getElementById("close");
+    btnModal.addEventListener("click", () => {
+      closeModal("myModal");
+    });
+  } else {
+    const dialog = document.getElementById("messageData");
 
-  btnModal.addEventListener("click", () => {
-    closeModal("myModal");
-  });
-}else{
-
-  const dialog = document.getElementById("messageData");
-
-  dialog.innerHTML = `
+    dialog.innerHTML = `
     <span><span>Name:</span> ${objForm.name}</span> <br/>
     <span><span>Surname:</span> ${objForm.surname}</span> <br/>
     <span><span>Email:</span> ${objForm.email}</span>
   `;
 
-
-  
-  openModal("modalData");
+    openModal("modalData");
 
     const btnModal = document.getElementById("closeData");
 
     btnModal.addEventListener("click", () => {
       closeModal("modalData");
     });
-}
+
+    // type HTMLCollection or type NodeList
+    const formGroups = document.getElementsByClassName("form-group");
+
+    const formGroupsArray = Array.from(formGroups);
+
+    formGroupsArray.forEach((formGroup) => {
+      const input = formGroup.querySelector("input");
+
+      input.value = "";
+    });
+  }
+
 
 });
 
