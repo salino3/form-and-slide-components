@@ -27,6 +27,16 @@ let submitValue = document.querySelector(".btn-1");
 
 
 
+function openModal(item) {
+  const modal = document.getElementById(item);
+  modal.style.display = "block";
+}
+
+function closeModal(item) {
+  const modal = document.getElementById(item);
+  modal.style.display = "none";
+}
+
 submitValue.addEventListener("click", function () {
   let objForm = {
     name: nameValue.value,
@@ -34,48 +44,41 @@ submitValue.addEventListener("click", function () {
     email: emailValue.value,
   };
 
-function openModal() {
-  const modal = document.getElementById("myModal");
-  modal.style.display = "block";
-}
-
-function closeModal() {
-  const modal = document.getElementById("myModal");
-  modal.style.display = "none";
-}
 
 if (!objForm.name || !objForm.surname || !objForm.email) {
   const errorMessage = document.getElementById("error-message");
   errorMessage.innerHTML = "Please refill all inputs..";
   errorMessage.style.color = "red";
 
-  openModal();
+  openModal("myModal");
 
   const btnModal = document.getElementById("close");
 
   btnModal.addEventListener("click", () => {
-    closeModal();
+    closeModal("myModal");
   });
 }else{
 
-  const dialog = document.createElement("div");
+  const dialog = document.getElementById("messageData");
+
   dialog.innerHTML = `
-    <span>Name: ${objForm.name}</span>
-    <span>Surname: ${objForm.surname}</span>
-    <span>Email: ${objForm.email}</span>
+    <span><span>Name:</span> ${objForm.name}</span> <br/>
+    <span><span>Surname:</span> ${objForm.surname}</span> <br/>
+    <span><span>Email:</span> ${objForm.email}</span>
   `;
+
+
   
-  alert(dialog.textContent);
+  openModal("modalData");
+
+    const btnModal = document.getElementById("closeData");
+
+    btnModal.addEventListener("click", () => {
+      closeModal("modalData");
+    });
 }
 
-
 });
-
-
-
-
-
-
 
 
 
