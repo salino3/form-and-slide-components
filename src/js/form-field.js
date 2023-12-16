@@ -31,6 +31,8 @@ export class FormField {
     input.setAttribute("name", this.inputName);
     input.setAttribute("class", this.style);
     input.setAttribute('placeholder', this.pl);
+    input.setAttribute('autocomplete', 'off');
+
 
     formGroup.appendChild(label);
     formGroup.appendChild(input);

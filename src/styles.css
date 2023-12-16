@@ -260,7 +260,8 @@ main .container {
   justify-content: center;
   align-items: center;
   max-width: 300px;
-  height: 80px;
+  min-height: 80px;
+  height: auto;
   position: relative;
   background-color: #fefefe;
   margin: 15% auto;
@@ -271,6 +272,20 @@ main .container {
   font-family: coursive;
   font-weight: 600;
   border-radius: 5px;
+
+}
+
+#messageData {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 2px;
+ color: black;
+}
+
+#messageData > span > span{
+    color: blue;
 }
 
 .close {
