@@ -107,6 +107,8 @@ main .container {
   @media (max-width: 450px) {
     flex-direction: column;
     max-height: 400px;
+    justify-content: flex-start;
+
   }
 }
 
