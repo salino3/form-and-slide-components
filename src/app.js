@@ -27,13 +27,6 @@ let submitValue = document.querySelector(".btn-1");
 
 
 
-submitValue.addEventListener("click", function () {
-  let objForm = {
-    name: nameValue.value,
-    surname: surnameValue.value,
-    email: emailValue.value,
-  };
-
 function openModal() {
   const modal = document.getElementById("myModal");
   modal.style.display = "block";
@@ -43,6 +36,14 @@ function closeModal() {
   const modal = document.getElementById("myModal");
   modal.style.display = "none";
 }
+
+submitValue.addEventListener("click", function () {
+  let objForm = {
+    name: nameValue.value,
+    surname: surnameValue.value,
+    email: emailValue.value,
+  };
+
 
 if (!objForm.name || !objForm.surname || !objForm.email) {
   const errorMessage = document.getElementById("error-message");
@@ -71,12 +72,6 @@ if (!objForm.name || !objForm.surname || !objForm.email) {
 
 });
 
-
-
-
-
-
-
-
+// openModal();
 
 

@@ -249,6 +249,10 @@ main .container {
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+
+  @media (max-width: 450px) {
+    top: 100px;
+  }
 }
 
 .modal-content {
