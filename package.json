@@ -8,7 +8,7 @@
     "start": "cd src && lite-server -c lite-server.config.json",
     "build": "mkdir build && cp -r src/* build/",
     "predeploy": "npm run build",
-    "deploy": "rimraf build && gh-pages -d build -m 'Deploy to GitHub Pages'"
+    "deploy": "gh-pages -d build -m 'Deploy to GitHub Pages'"
   },
   "keywords": [],
   "author": "",
