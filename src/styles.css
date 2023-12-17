@@ -304,18 +304,87 @@ main .container {
 
 /*  */
 
-.sectionFlags {
+.containerFlags {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxHorizontalBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+  width: 230px;
+
+}
+
+.boxHorizontalBtns > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.boxHorizontalBtns button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+  width: 70px;
+  height: 33px;
+  border-radius: 90px;
+  border: groove 4px;
+  cursor: pointer;
+ 
+}
+
+.boxHorizontalBtns button:active {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+  height: 32px;
+  border-radius: 90px;
+  border: groove 3px;
+  width: 68px;
+ 
+}
+
+.boxHorizontalBtns button:active  .svgLeftFlagHorizontal,
+.boxHorizontalBtns button:active  .svgRightFlagHorizontal {
+  height: 22px;
+  width: 22px;
+}
+
+
+.svgRightFlagHorizontal {
+  position: relative;
+  right: 15px;
+}
+
+.svgLeftFlagHorizontal {
+  position: relative;
+  left: 15px;
+}
+
+
+.sectionFlags {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 18px;
   max-width: 500px;
   height: 190px;
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
-  border: solid;
-
+  padding: 0px 20px;
 }
 
 .flagCard{
