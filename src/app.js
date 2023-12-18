@@ -84,11 +84,7 @@ submitValue.addEventListener("click", function () {
       input.value = "";
     });
   }
-
-
 });
-
-
 
 
 //
@@ -131,10 +127,13 @@ rightButton.addEventListener('click', () => {
 });
 
 function setImg() {
-  return slider_img.setAttribute("src", "./images/" + images[i]);
-}
+  slider_img.style.opacity = 0;
+  setTimeout(() => {
+    slider_img.setAttribute("src", "./images/" + images[i]);
+    slider_img.style.opacity = 1;
+  }, 500);
+};
 
-
-
-
-
+window.addEventListener("load", () => {
+    slider_img.style.opacity = 1;  
+});
