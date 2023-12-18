@@ -93,21 +93,6 @@ submitValue.addEventListener("click", function () {
 
 //
 
-const leftFlagButton = document.querySelector(".left-flag-button");
-const rightFlagButton = document.querySelector(".right-flag-button");
-const leftFlagSVG = document.querySelector(".svgLeftFlagHorizontal");
-const rightFlagSVG = document.querySelector(".svgRightFlagHorizontal");
-
-leftFlagButton.addEventListener("click", () => {
-  leftFlagSVG.classList.add("active");
-  rightFlagSVG.classList.remove("active");
-});
-
-rightFlagButton.addEventListener("click", () => {
-  rightFlagSVG.classList.add("active");
-  leftFlagSVG.classList.remove("active");
-});
-
 
 
 
