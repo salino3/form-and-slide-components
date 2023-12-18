@@ -96,8 +96,8 @@ main .container {
 .sectionCards {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   gap: 20px;
   max-width: 500px;
   scroll-snap-type: x mandatory;
