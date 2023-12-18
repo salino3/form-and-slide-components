@@ -309,12 +309,13 @@ main .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 40px;
 }
 
 .boxHorizontalBtns {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   gap: 50px;
   align-items: center;
   width: 230px;
@@ -335,13 +336,16 @@ main .container {
   justify-content: center;
   align-items: center;
   background: gray;
-  width: 70px;
+  width: 95px;
   height: 33px;
   border-radius: 90px;
   border: groove 4px;
   cursor: pointer;
+  color: white;
+  font-weight: 600; 
  
 }
+
 
 .boxHorizontalBtns button:active {
   display: flex;
@@ -352,7 +356,7 @@ main .container {
   height: 32px;
   border-radius: 90px;
   border: groove 3px;
-  width: 68px;
+  width: 95px;
  
 }
 
@@ -377,14 +381,8 @@ main .container {
 .sectionFlags {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  gap: 18px;
-  max-width: 500px;
-  height: 190px;
-  scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-  padding: 0px 20px;
 }
 
 .flagCard{
@@ -397,7 +395,10 @@ main .container {
   height: 100%;
 }
 
-
+.slider-img {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+}
 
 
 
