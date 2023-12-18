@@ -3,6 +3,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content="exercise, slide cards, form" />
+    <meta name="author" content="Flavio Forte" />
+    <meta
+      name="keywords"
+      content="silide card, form, javascript, class, html, css"
+    />
     <title>Front app</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles.css" />
@@ -44,41 +50,38 @@
               <path d="M5 12h14"></path>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
-  
           </div>
         </div>
         <div class="containerComponentsSlider">
-           <div class="container">
-           <section class="sectionCards">
-            <div class="card">
-              <img src="./images/cat1.jpg" alt="cat" />
-            </div>
-            <div class="card">
-              <img src="./images/dog1.jpg" alt="dog" />
-            </div>
-            <div class="card">
-              <img src="./images/cat2.jpg" alt="cat" />
-            </div>
-            <div class="card">
-              <img src="./images/cat3.jpg" alt="cat" />
-            </div>
-            <div class="card">
-              <img src="./images/dog3.jpg" alt="dog" />
-            </div>
-            <div class="card">
-              <img src="./images/dog2.jpg" alt="dog" />
-            </div>
-            <div class="card">
-              <img src="./images/cat4.jpg" alt="cat" />
-            </div>
-            <div class="card">
-              <img src="./images/dog4.jpg" alt="dog" />
-            </div>
-           </section>
-       
-            </div>
-           <div class="contentArrows">
-       
+          <div class="container">
+            <section class="sectionCards">
+              <div class="card">
+                <img src="./images/cat1.jpg" alt="cat" />
+              </div>
+              <div class="card">
+                <img src="./images/dog1.jpg" alt="dog" />
+              </div>
+              <div class="card">
+                <img src="./images/cat2.jpg" alt="cat" />
+              </div>
+              <div class="card">
+                <img src="./images/cat3.jpg" alt="cat" />
+              </div>
+              <div class="card">
+                <img src="./images/dog3.jpg" alt="dog" />
+              </div>
+              <div class="card">
+                <img src="./images/dog2.jpg" alt="dog" />
+              </div>
+              <div class="card">
+                <img src="./images/cat4.jpg" alt="cat" />
+              </div>
+              <div class="card">
+                <img src="./images/dog4.jpg" alt="dog" />
+              </div>
+            </section>
+          </div>
+          <div class="contentArrows">
             <svg
               transform="rotate(270)"
               xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +99,7 @@
             </svg>
             <!--  -->
 
-                 <svg
+            <svg
               transform="rotate(90)"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -111,12 +114,12 @@
               <path d="M5 12h14"></path>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
-  
           </div>
         </div>
       </div>
 
       <div>
+        <h2><b>Form</b></h2>
         <div id="myModal" class="modal">
           <div class="modal-content">
             <button id="close" class="close" onclick="closeModal()">X</button>
@@ -125,14 +128,74 @@
         </div>
         <div id="modalData" class="modal">
           <div class="modal-content">
-            <button id="closeData" class="close" onclick="closeModal()">OK</button>
+            <button id="closeData" class="close" onclick="closeModal()">
+              OK
+            </button>
             <div id="messageData"></div>
           </div>
         </div>
         <form id="myForm"></form>
       </div>
+      <!--  -->
+      <div>
+        <h2><b>Slide flag cards</b></h2>
+
+        <div class="containerFlags">
+          <div class="boxHorizontalBtns">
+            <div>
+              <button class="leftFlagButton"> 
+                <svg
+                class="svgRightFlagHorizontal"
+                transform="rotate(180)"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                >
+                <path d="M-16 12h35"></path>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+              <span>Prev</span>
+            </button>
+          </div>
+            <!--  -->
+            <div>
+
+              <button class="rightFlagButton">
+                <span>Next</span>
+                <svg
+              class="svgLeftFlagHorizontal"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              >
+              <path d="M-16 12h35"></path>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+           </div>
+          </div>
+          <section class="sectionFlags">
+            <div class="flagCard">
+              <img src="./images/flag-1.jpg" class="slider-img" alt="flag" />
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
 
     <script defer type="module" src="./app.js"></script>
+
   </body>
 </html>

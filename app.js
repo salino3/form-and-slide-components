@@ -84,10 +84,56 @@ submitValue.addEventListener("click", function () {
       input.value = "";
     });
   }
-
-
 });
 
 
+//
 
+let leftButton = document.querySelector(".leftFlagButton");
+let rightButton = document.querySelector(".rightFlagButton");
 
+let slider_img = document.querySelector(".slider-img");
+let images = [
+  "flag-1.jpg",
+  "flag-2.jpg",
+  "flag-3.jpg",
+  "flag-4.jpg",
+  "flag-5.jpg",
+  "flag-6.jpg",
+  "flag-7.jpg",
+  "flag-8.jpg",
+];
+let i = 0;
+
+function prev() {
+
+  if (i <= 0) i = images.length;
+  i--;
+  return setImg();
+}
+
+function next() {
+  if (i >= images.length - 1) i = -1;
+  i++;
+  return setImg();
+}
+
+leftButton.addEventListener('click', () => {
+  prev();
+});
+
+rightButton.addEventListener('click', () => {
+  next()
+});
+
+function setImg() {
+  slider_img.style.opacity = 0;
+  setTimeout(() => {
+    slider_img.setAttribute("src", "./images/" + images[i]);
+    slider_img.style.opacity = 1;
+  }, 500);
+};
+
+window.addEventListener("load", () => {
+    slider_img.style.opacity = 1;  
+});

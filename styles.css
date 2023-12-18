@@ -112,12 +112,12 @@ main .container {
   }
 }
 
-.sectionCards::-webkit-scrollbar {
+.sectionCards::-webkit-scrollbar, .sectionFlags::-webkit-scrollbar {
   display: none;
 }
 
 /* For Firefox */
-.sectionCards {
+.sectionCards, .sectionFlags {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -301,3 +301,106 @@ main .container {
   justify-content: center;
   align-items: center;
 }
+
+/*  */
+
+.containerFlags {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.boxHorizontalBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  width: 230px;
+
+}
+
+.boxHorizontalBtns > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.boxHorizontalBtns button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+  width: 95px;
+  height: 33px;
+  border-radius: 90px;
+  border: groove 4px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600; 
+ 
+}
+
+
+.boxHorizontalBtns button:active {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+  height: 32px;
+  border-radius: 90px;
+  border: groove 3px;
+  width: 95px;
+ 
+}
+
+.boxHorizontalBtns button:active  .svgLeftFlagHorizontal,
+.boxHorizontalBtns button:active  .svgRightFlagHorizontal {
+  height: 22px;
+  width: 22px;
+}
+
+
+.svgRightFlagHorizontal {
+  position: relative;
+  right: 15px;
+}
+
+.svgLeftFlagHorizontal {
+  position: relative;
+  left: 15px;
+}
+
+
+.sectionFlags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flagCard{
+  min-width: 200px;
+  height: auto;
+}
+
+.flagCard img {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-img {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+}
+
+
+
+
+
